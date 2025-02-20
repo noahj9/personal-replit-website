@@ -5,36 +5,37 @@ import { Menu } from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
 
 const NAV_ITEMS = [
-  { path: "/", label: "Home" },
-  { path: "/portfolio", label: "Portfolio" },
-  { path: "/gallery", label: "Gallery" },
-  { path: "/blog", label: "Blog" },
-  { path: "/experience", label: "Experience" },
+  { path: "home", label: "Home" },
+  { path: "portfolio", label: "Portfolio" },
+  { path: "gallery", label: "Gallery" },
+  { path: "blog", label: "Blog" },
+  { path: "experience", label: "Experience" },
 ];
 
 export function Navbar() {
-  const [location] = useLocation();
+  const scrollToSection = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <nav className="fixed top-0 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 z-50">
       <div className="container flex h-16 items-center">
         <div className="mr-4 hidden md:flex">
-          <Link href="/">
-            <a className="mr-6 flex items-center space-x-2">
-              <span className="font-bold">Noah Jina</span>
-            </a>
-          </Link>
+          <button
+            onClick={() => scrollToSection('home')}
+            className="mr-6 flex items-center space-x-2"
+          >
+            <span className="font-bold">Noah Jina</span>
+          </button>
           <nav className="flex items-center space-x-6 text-sm font-medium">
             {NAV_ITEMS.map((item) => (
-              <Link key={item.path} href={item.path}>
-                <a
-                  className={`transition-colors hover:text-foreground/80 ${
-                    location === item.path ? "text-foreground" : "text-foreground/60"
-                  }`}
-                >
-                  {item.label}
-                </a>
-              </Link>
+              <button
+                key={item.path}
+                onClick={() => scrollToSection(item.path)}
+                className="transition-colors hover:text-foreground/80 text-foreground/60"
+              >
+                {item.label}
+              </button>
             ))}
           </nav>
         </div>
@@ -48,15 +49,20 @@ export function Navbar() {
           <SheetContent side="left">
             <div className="flex flex-col space-y-4 mt-8">
               {NAV_ITEMS.map((item) => (
-                <Link key={item.path} href={item.path}>
-                  <a
-                    className={`text-lg ${
-                      location === item.path ? "text-foreground" : "text-foreground/60"
-                    }`}
-                  >
-                    {item.label}
-                  </a>
-                </Link>
+                <button
+                  key={item.path}
+                  onClick={() => {
+                    scrollToSection(item.path);
+                    const closestDialog = document.querySelector('[role="dialog"]');
+                    if (closestDialog) {
+                      const closeButton = closestDialog.querySelector('button[aria-label="Close"]');
+                      closeButton?.click();
+                    }
+                  }}
+                  className="text-lg text-foreground/60 text-left"
+                >
+                  {item.label}
+                </button>
               ))}
             </div>
           </SheetContent>
