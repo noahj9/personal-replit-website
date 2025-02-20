@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
 
 export function Hero() {
   return (
@@ -38,7 +37,6 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="space-x-4"
             >
               <Button
                 size="lg"
@@ -46,14 +44,6 @@ export function Hero() {
                 onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 View Portfolio
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="rounded-full"
-                onClick={() => document.getElementById('blog')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Read Blog
               </Button>
             </motion.div>
           </div>

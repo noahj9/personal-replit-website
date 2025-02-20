@@ -24,7 +24,7 @@ export default function Home() {
               <div className="text-center">Loading...</div>
             ) : (
               experiences?.map((exp) => (
-                <Card key={exp.id}>
+                <Card key={exp.id} className="transition-transform duration-200 hover:scale-[1.02]">
                   <CardHeader>
                     <CardTitle>{exp.role}</CardTitle>
                     <div className="text-sm text-muted-foreground">

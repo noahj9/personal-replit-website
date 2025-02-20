@@ -37,7 +37,7 @@ export function PhotoGrid() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3, delay: index * 0.1 }}
-            className={`cursor-pointer overflow-hidden rounded-lg ${getImageSpanClasses(index)}`}
+            className={`cursor-pointer overflow-hidden rounded-lg transition-transform duration-200 hover:scale-[1.02] ${getImageSpanClasses(index)}`}
             onClick={() => setSelectedPhoto(photo)}
           >
             <img

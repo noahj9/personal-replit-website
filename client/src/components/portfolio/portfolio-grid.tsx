@@ -22,7 +22,7 @@ export function PortfolioGrid() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: index * 0.1 }}
         >
-          <Card className="overflow-hidden">
+          <Card className="overflow-hidden transition-transform duration-200 hover:scale-[1.02]">
             <div className="aspect-video relative">
               <img
                 src={item.imageUrl}
