@@ -18,7 +18,7 @@ export function Navbar() {
       <div className="container flex h-16 items-center justify-between max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-8">
           <div className="w-32">
-            <span className="font-bold text-foreground dark:text-white">Logo</span>
+            <span className="logo text-foreground dark:text-white">Noah Jina</span>
           </div>
           <nav className="flex items-center space-x-6 text-sm font-medium">
             {NAV_ITEMS.map((item) => (
