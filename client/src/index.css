@@ -30,8 +30,14 @@
     @apply border-border;
   }
 
+  html, body {
+    @apply min-h-screen;
+  }
+
   body {
-    @apply font-sans antialiased relative min-h-screen;
+    @apply font-sans antialiased;
+    margin: 0;
+    padding: 0;
     background: linear-gradient(45deg,
       rgb(255, 192, 203),
       rgb(147, 112, 219),
