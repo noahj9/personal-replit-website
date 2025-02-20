@@ -15,25 +15,36 @@ export function PhotoGrid() {
     return <div className="text-center">Loading...</div>;
   }
 
+  // Function to determine image span classes based on aspect ratio or size preference
+  const getImageSpanClasses = (index: number) => {
+    // Alternate between different sizes for visual interest
+    // You can modify this logic based on actual image dimensions
+    const patterns = [
+      "col-span-1 row-span-1", // Standard
+      "col-span-2 row-span-1", // Wide
+      "col-span-1 row-span-2", // Tall
+      "col-span-2 row-span-2", // Large
+    ];
+    return patterns[index % patterns.length];
+  };
+
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
         {photos?.map((photo, index) => (
           <motion.div
             key={photo.id}
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3, delay: index * 0.1 }}
-            className="cursor-pointer"
+            className={`cursor-pointer overflow-hidden rounded-lg ${getImageSpanClasses(index)}`}
             onClick={() => setSelectedPhoto(photo)}
           >
-            <div className="aspect-square relative overflow-hidden rounded-lg">
-              <img
-                src={photo.imageUrl}
-                alt={photo.title}
-                className="object-cover w-full h-full transition-transform hover:scale-105"
-              />
-            </div>
+            <img
+              src={photo.imageUrl}
+              alt={photo.title}
+              className="w-full h-full object-cover transition-transform hover:scale-105"
+            />
           </motion.div>
         ))}
       </div>

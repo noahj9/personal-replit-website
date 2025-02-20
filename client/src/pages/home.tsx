@@ -13,31 +13,8 @@ export default function Home() {
   });
 
   return (
-    <div>
+    <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
       <Hero />
-
-      <section id="portfolio" className="py-20 bg-muted/50">
-        <div className="container">
-          <h2 className="text-4xl font-bold mb-8">Portfolio</h2>
-          <PortfolioGrid />
-        </div>
-      </section>
-
-      <section id="gallery" className="py-20">
-        <div className="container">
-          <h2 className="text-4xl font-bold mb-8">Photo Gallery</h2>
-          <PhotoGrid />
-        </div>
-      </section>
-
-      <section id="blog" className="py-20 bg-muted/50">
-        <div className="container">
-          <h2 className="text-4xl font-bold mb-8">Blog</h2>
-          <div className="max-w-3xl mx-auto">
-            <SubstackEmbed />
-          </div>
-        </div>
-      </section>
 
       <section id="experience" className="py-20">
         <div className="container">
@@ -65,6 +42,29 @@ export default function Home() {
               ))
             )}
           </div>
+        </div>
+      </section>
+
+      <section id="portfolio" className="py-20 bg-muted/50">
+        <div className="container">
+          <h2 className="text-4xl font-bold mb-8">Portfolio</h2>
+          <PortfolioGrid />
+        </div>
+      </section>
+
+      <section id="blog" className="py-20">
+        <div className="container">
+          <h2 className="text-4xl font-bold mb-8">Blog</h2>
+          <div className="max-w-3xl mx-auto">
+            <SubstackEmbed />
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" className="py-20 bg-muted/50">
+        <div className="container">
+          <h2 className="text-4xl font-bold mb-8">Photo Gallery</h2>
+          <PhotoGrid />
         </div>
       </section>
     </div>
