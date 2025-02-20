@@ -45,7 +45,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="portfolio" className="py-20 bg-muted/50">
+      <section id="portfolio" className="py-20">
         <div className="container">
           <h2 className="text-4xl font-bold mb-8">Portfolio</h2>
           <PortfolioGrid />
@@ -61,7 +61,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="gallery" className="py-20 bg-muted/50">
+      <section id="gallery" className="py-20">
         <div className="container">
           <h2 className="text-4xl font-bold mb-8">Photo Gallery</h2>
           <PhotoGrid />
