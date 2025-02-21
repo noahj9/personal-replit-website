@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import profilePicture from "../../../../public/images/profile.jpg";
 
 export function Hero() {
   return (
@@ -13,9 +14,9 @@ export function Hero() {
             className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-primary/20"
           >
             <img
-              src="https://placehold.co/400x400"
+              src={profilePicture}
               alt="Noah Jina"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover scale-[2.0]"
             />
           </motion.div>
 
@@ -41,9 +42,9 @@ export function Hero() {
               <Button
                 size="lg"
                 className="rounded-full"
-                onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                View Portfolio
+                View Experience
               </Button>
             </motion.div>
           </div>

@@ -1,24 +1,27 @@
-import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import type { Photo } from "@shared/schema";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { format } from "date-fns";
+import data from "../../../../public/data.json"; // Import the data from the JSON file
+import { getImgSrc } from "./photoLoader";
+
+type Photo = {
+  id: number;
+  imageUrl: string;
+  title: string;
+  date: string;
+  description?: string;
+};
 
 export function PhotoGrid() {
   const [selectedPhoto, setSelectedPhoto] = useState<Photo | null>(null);
-  const { data: photos, isLoading } = useQuery<Photo[]>({
-    queryKey: ["/api/photos"],
-  });
 
-  if (isLoading) {
-    return <div className="text-center">Loading...</div>;
-  }
+  // Directly use the photos from the imported JSON file
+  const photos = data.photos;
 
   // Function to determine image span classes based on aspect ratio or size preference
   const getImageSpanClasses = (index: number) => {
     // Alternate between different sizes for visual interest
-    // You can modify this logic based on actual image dimensions
     const patterns = [
       "col-span-1 row-span-1", // Standard
       "col-span-2 row-span-1", // Wide
@@ -41,7 +44,7 @@ export function PhotoGrid() {
             onClick={() => setSelectedPhoto(photo)}
           >
             <img
-              src={photo.imageUrl}
+              src={getImgSrc(photo.imageUrl)}
               alt={photo.title}
               className="w-full h-full object-cover transition-transform hover:scale-105"
             />
@@ -50,13 +53,13 @@ export function PhotoGrid() {
       </div>
 
       <Dialog open={!!selectedPhoto} onOpenChange={() => setSelectedPhoto(null)}>
-        <DialogContent className="max-w-4xl">
+        <DialogContent className="max-w-xl">
           {selectedPhoto && (
             <div className="space-y-4">
               <img
-                src={selectedPhoto.imageUrl}
+                src={getImgSrc(selectedPhoto.imageUrl)}
                 alt={selectedPhoto.title}
-                className="w-full rounded-lg"
+                className="max-h-[75vh] w-full rounded-lg object-cover object-center"
               />
               <div>
                 <h3 className="text-lg font-semibold">{selectedPhoto.title}</h3>

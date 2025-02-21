@@ -6,6 +6,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        autography: 'autography',
         sans: ["Inter var", "system-ui", "sans-serif"],
       },
       borderRadius: {

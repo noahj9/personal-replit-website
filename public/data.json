@@ -1,0 +1,86 @@
+{
+    "portfolioItems": [
+      {
+        "id": 1,
+        "title": "Project Alpha",
+        "description": "A revolutionary web application",
+        "imageUrl": "https://placehold.co/600x400",
+        "link": "https://example.com",
+        "order": 1
+      }
+    ],
+    "photos": [
+      {
+        "id": 1,
+        "title": "Golfing",
+        "imageUrl": "golf1.png",
+        "description": "Golfing at Mickelson National GC",
+        "date": "2024-01-15"
+      },
+      {
+        "id": 2,
+        "title": "Asulkan 2024",
+        "imageUrl": "asulkan2024.jpeg",
+        "description": "Asulkan 2024",
+        "date": "2024-01-15"
+      },
+      {
+        "id": 3,
+        "title": "Medellin 2024",
+        "imageUrl": "medellin2024.jpeg",
+        "description": "Medellin 2024",
+        "date": "2024-01-15"
+      },
+      {
+        "id": 4,
+        "title": "Plitvice 2024",
+        "imageUrl": "plitvice.jpg",
+        "description": "Plitvice 2024",
+        "date": "2024-01-15"
+      },
+      {
+        "id": 5,
+        "title": "Woodbury 2024",
+        "imageUrl": "woodbury.jpg",
+        "description": "Woodbury 2024",
+        "date": "2024-01-15"
+      },
+      {
+        "id": 6,
+        "title": "Poland 2024",
+        "imageUrl": "poland1.jpeg",
+        "description": "Poland 2024",
+        "date": "2024-01-15"
+      },
+      {
+        "id": 7,
+        "title": "Santamarta 2024",
+        "imageUrl": "santamarta2024.jpeg",
+        "description": "Santamarta 2024",
+        "date": "2024-01-15"
+      }
+    ],
+    "experiences": [
+      {
+        "id": 1,
+        "company": "Amazon Web Services",
+        "role": "Software Development Engineer Intern",
+        "description": "Joined AWS SignUp Team for a Summer Internship. Integrated a new security feature into the SignUp flow. Received a full-time return offer.",
+        "startDate": "2024-07",
+        "endDate": "2024-09",
+        "order": 1,
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
+      },
+      {
+        "id": 2,
+        "company": "Richmond Capital Partners",
+        "role": "Managing Partner, Portfolio Manager",
+        "description": "UWO's largest student fund. Strategies: Event-Driven Macro, Long/Short Equities, Quantitative Derivatives, Commodities.",
+        "startDate": "2023-10",
+        "endDate": null,
+        "order": 1,
+        "imageUrl": "logo.png"
+      }
+    ]
+  }
+  

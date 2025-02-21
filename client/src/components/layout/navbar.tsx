@@ -3,7 +3,7 @@ import { ThemeToggle } from "./theme-toggle";
 const NAV_ITEMS = [
   { path: "home", label: "Home" },
   { path: "experience", label: "Experience" },
-  { path: "portfolio", label: "Portfolio" },
+  // { path: "portfolio", label: "Portfolio" },
   { path: "blog", label: "Blog" },
   { path: "gallery", label: "Gallery" },
 ];
@@ -18,7 +18,7 @@ export function Navbar() {
       <div className="container flex h-16 items-center justify-between max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-8">
           <div className="w-32">
-            <span className="logo text-foreground dark:text-white">Noah Jina</span>
+          <h1 className="text-3xl flex items-center font-autography mr-10 md:mr-3">Noah Jina</h1>
           </div>
           <nav className="flex items-center space-x-6 text-sm font-medium">
             {NAV_ITEMS.map((item) => (
