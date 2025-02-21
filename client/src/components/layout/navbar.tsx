@@ -10,7 +10,7 @@ const NAV_ITEMS = [
   { path: "experience", label: "Experience" },
   { path: "education", label: "Education" },
   // { path: "portfolio", label: "Portfolio" },
-  { path: "blog", label: "Blog" },
+  //{ path: "blog", label: "Blog" },
   { path: "gallery", label: "Gallery" },
   { path: "contact", label: "Contact" },
 ];

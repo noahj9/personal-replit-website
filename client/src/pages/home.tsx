@@ -100,14 +100,14 @@ export default function Home() {
         </div>
       </section> */}
 
-      <section id="blog" className="py-20">
+      {/* <section id="blog" className="py-20">
         <div className="container">
           <h2 className="text-4xl font-bold mb-8">Blog</h2>
           <div className="max-w-3xl">
             <SubstackEmbed />
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section id="gallery" className="py-20">
         <div className="container">
