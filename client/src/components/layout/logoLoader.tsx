@@ -1,12 +1,14 @@
 // logoLoader.js
 import awsLogo from '../../../../public/logos/aws.svg';
 import rcpLogo from '../../../../public/logos/logo.png';
+import westernLogo from '../../../../public/logos/western.png';
 // Add more logo imports as needed
 
 // Create a mapping object of filename -> imported image
 export const logoMap = {
   'aws.svg': awsLogo,
   'logo.png': rcpLogo,
+  'western.png': westernLogo,
   // Add more mappings as needed
 };
 

@@ -81,6 +81,34 @@
         "order": 1,
         "imageUrl": "logo.png"
       }
+    ],
+    "education": [
+      {
+        "id": 1,
+        "school": "Ivey Business School",
+        "degree": "Honours Business Administration",
+        "startDate": "2020-10",
+        "endDate": "2025-05",
+        "description": "Currently pursuing an HBA degree with a focus in Financial Markets.",
+        "achievements": [
+          "Dean's Honor List",
+          "Relevant coursework: Business Strategy, Finance, Marketing"
+        ],
+        "imageUrl": "https://www.ivey.uwo.ca/media/278427/Ivey-Main-Logo.jpg"
+      },
+      {
+        "id": 2,
+        "school": "Western University",
+        "degree": "Bachelor of Engineering Science, Software Engineering",
+        "startDate": "2020-10",
+        "endDate": "2025-05",
+        "description": "Currently pursuing a BESc degree in Software Engineering.",
+        "achievements": [
+          "Dean's Honor List",
+          "GPA: 3.8"
+        ],
+        "imageUrl": "western.png"
+      }
     ]
   }
   
